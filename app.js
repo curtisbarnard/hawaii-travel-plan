@@ -13,7 +13,7 @@ sortSelect.innerHTML = `
   <option value="region">Sort: Region</option>
   <option value="town">Sort: Town</option>
 `;
-document.querySelector(".filters").appendChild(sortSelect);
+document.querySelector(".filters").prepend(sortSelect);
 
 function loadLocalState() {
   const saved = JSON.parse(localStorage.getItem("tripState") || "{}");
@@ -54,19 +54,28 @@ function render() {
 
   items.forEach(item => {
     const row = document.createElement("div");
-    row.className = "item" + (item.done ? " done" : "");
+    let regionClass = item.region ? " " + item.region.toLowerCase() : "";
+    row.className = "item" + regionClass + (item.done ? " done" : "");
+
 
     row.innerHTML = `
-      <div class="item-header">
+    <div class="item-header">
         <input type="checkbox" ${item.done ? "checked" : ""}>
-        <h3>${item.name}</h3>
-      </div>
-      <div class="item-info">
+        <h3>
+        <a href="${item.maps || '#'}" target="_blank" rel="noopener">
+            ${item.name}
+        </a>
+        </h3>
+    </div>
+    <div class="item-desc">
+        ${item.description || ""}
+    </div>
+    <div class="item-info">
         <span>Type: ${item.type || "-"}</span>
         <span>Region: ${item.region || "-"}</span>
         <span>${item.town ? "Town: " + item.town : ""}</span>
-      </div>
-      <textarea placeholder="Notes...">${item.notes || ""}</textarea>
+    </div>
+    <textarea placeholder="Notes...">${item.notes || ""}</textarea>
     `;
 
     const checkbox = row.querySelector("input[type='checkbox']");
@@ -108,3 +117,19 @@ function populateFilters() {
   searchEl.addEventListener("input", render);
   sortSelect.addEventListener("change", render);
 }
+
+// Download current state as JSON
+document.getElementById("download").addEventListener("click", () => {
+  // include updated notes + done state
+  saveLocalState();
+  const jsonStr = JSON.stringify(data, null, 2);
+  const blob = new Blob([jsonStr], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "hawaii-trip-progress.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});

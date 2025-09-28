@@ -10,16 +10,25 @@
   <header>
     <h1>🌺 Hawaii Trip</h1>
     <div class="filters">
-      <select id="filter-type">
+        <select id="filter-type">
         <option value="">All Types</option>
-      </select>
-      <select id="filter-region">
+        </select>
+        <select id="filter-region">
         <option value="">All Regions</option>
-      </select>
-      <input type="text" id="search" placeholder="Search...">
+        </select>
+        <input type="text" id="search" placeholder="Search...">
+        <button id="download">⬇️ Save</button>
     </div>
-  </header>
+    </header>
 
+  <section id="map">
+  <div class="map-legend">
+    <span class="legend north">North</span>
+    <span class="legend south">South</span>
+    <span class="legend east">East</span>
+    <span class="legend west">West</span>
+  </div>
+</section>
   <main id="list"></main>
 
   <footer>
