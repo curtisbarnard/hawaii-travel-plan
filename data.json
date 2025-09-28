@@ -1,0 +1,346 @@
+[
+  {
+    "name": "Pau Hana Poke",
+    "type": "restaurant",
+    "region": "west",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Mauna Kea",
+    "type": "hike",
+    "region": "north",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Beaches good for kids",
+    "type": "beach-kids",
+    "region": "west",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "King Kamehameha Kona Beach Hotel",
+    "type": "hotel",
+    "region": "west",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Natural Energy Lab Kona",
+    "type": "museum",
+    "region": "west",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Onekahakaha",
+    "type": "beach-kids",
+    "region": "east",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Keiki Beach",
+    "type": "beach-kids",
+    "region": "west",
+    "town": "Kailua",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Higashihara Park Playground",
+    "type": "playground",
+    "region": "west",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Waimea Park Playground",
+    "type": "playground",
+    "region": "north",
+    "town": "Waimea",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Gilbert Kahele Recreation Area Playground",
+    "type": "playground",
+    "region": "north",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Mokupāpapa Discovery Center",
+    "type": "museum",
+    "region": "east",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Mokuaikaua Church (1820, free)",
+    "type": "historic",
+    "region": "west",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Don the Beachcomber (sunset)",
+    "type": "restaurant",
+    "region": "west",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Zippy’s",
+    "type": "restaurant",
+    "region": "multiple",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kaumana Caves Lava Tube",
+    "type": "hike",
+    "region": "east",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Hilo Farmers Market",
+    "type": "market",
+    "region": "east",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Volcano Park (at night)",
+    "type": "park",
+    "region": "south",
+    "town": "Volcano",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Nāhuku Lava Tube",
+    "type": "hike",
+    "region": "south",
+    "town": "Volcano",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Thurston Lava Tube (0.5 mile hike)",
+    "type": "hike",
+    "region": "south",
+    "town": "Volcano",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Sulphur Banks Trail (0.75 mile)",
+    "type": "hike",
+    "region": "south",
+    "town": "Volcano",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kīpukapuaulu Bird Loop (1.6 miles)",
+    "type": "hike",
+    "region": "south",
+    "town": "Volcano",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Punaluʻu Black Sand Beach",
+    "type": "beach",
+    "region": "south",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Greenwell Farms",
+    "type": "farm",
+    "region": "west",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Island Gourmet Market",
+    "type": "market",
+    "region": "west",
+    "town": "Waikoloa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Mālama Trail Petroglyphs",
+    "type": "hike",
+    "region": "west",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Hilton Waikoloa Village",
+    "type": "hotel",
+    "region": "west",
+    "town": "Waikoloa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Place of Refuge (Mark Twain)",
+    "type": "historic",
+    "region": "west",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Captain Cook Monument Bay (where he was killed)",
+    "type": "historic",
+    "region": "west",
+    "town": "Kealakekua",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Parker Ranch",
+    "type": "historic",
+    "region": "north",
+    "town": "Waimea",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Waimea Cowboys",
+    "type": "cultural",
+    "region": "north",
+    "town": "Waimea",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Waialea Bay (Hapuna, snorkeling)",
+    "type": "snorkel",
+    "region": "west",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Richardson Ocean Park (snorkel, turtles)",
+    "type": "snorkel",
+    "region": "east",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Puka Puka Bento",
+    "type": "restaurant",
+    "region": "east",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Two Step Beach (go left)",
+    "type": "snorkel",
+    "region": "west",
+    "town": "Kealakekua",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Captain Cook Snorkeling (kayak)",
+    "type": "snorkel",
+    "region": "west",
+    "town": "Kealakekua",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kikaua Point Park (kids + snorkel, limited parking)",
+    "type": "beach-kids",
+    "region": "west",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Government Beach Road (scenic drive)",
+    "type": "scenic",
+    "region": "east",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Liliʻuokalani Gardens & Coconut Island",
+    "type": "park",
+    "region": "east",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Puʻuloa Petroglyphs (1.4 mile hike, exposed)",
+    "type": "hike",
+    "region": "south",
+    "town": "Volcano",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "ʻAkaka Falls (0.5 mile, go early)",
+    "type": "hike",
+    "region": "east",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kalopa Native Forest Trail (0.7 miles)",
+    "type": "hike",
+    "region": "north",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Place of Refuge (history walk 0.5 miles)",
+    "type": "historic",
+    "region": "west",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "ʻŌʻōma Trail (1 mile loop, plants)",
+    "type": "hike",
+    "region": "west",
+    "town": "",
+    "notes": "",
+    "done": false
+  }
+]
