@@ -35,8 +35,10 @@ function render() {
   const searchVal = searchEl.value.toLowerCase();
   const sortVal = sortSelect.value;
 
+  const selectedTypes = Array.from(filterType.selectedOptions).map(opt => opt.value);
+
   let items = data
-    .filter(i => !typeVal || i.type === typeVal)
+    .filter(i => selectedTypes.length === 0 || selectedTypes.every(t => (i.type || []).includes(t)))
     .filter(i => !regionVal || i.region === regionVal)
     .filter(i => i.name.toLowerCase().includes(searchVal));
 
@@ -66,7 +68,7 @@ function render() {
         ${item.description || ""}
     </div>
     <div class="item-info">
-        <span>Type: ${item.type || "-"}</span>
+        <span>Type: ${(item.type || []).join(", ") || "-"}</span>
         <span>Region: ${item.region || "-"}</span>
         <span>${item.town ? "Town: " + item.town : ""}</span>
     </div>
@@ -107,10 +109,16 @@ if (!loadLocalState()) {
 }
 
 function populateFilters() {
-  const types = [...new Set(data.map(i => i.type).filter(Boolean))].sort();
+  // flatten all type arrays, deduplicate
+  const types = [...new Set(data.flatMap(i => i.type || []))].sort();
   const regions = [...new Set(data.map(i => i.region).filter(Boolean))].sort();
 
-  types.forEach(t => filterType.innerHTML += `<option value="${t}">${t}</option>`);
+  filterType.innerHTML = ""; // reset
+  types.forEach(t => {
+    filterType.innerHTML += `<option value="${t}">${t}</option>`;
+  });
+
+  filterRegion.innerHTML = '<option value="">All Regions</option>';
   regions.forEach(r => filterRegion.innerHTML += `<option value="${r}">${r}</option>`);
 
   filterType.addEventListener("change", render);
