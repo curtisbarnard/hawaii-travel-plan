@@ -51,7 +51,7 @@ header h1 {
 
 @media (min-width: 600px) {
   .filters {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -178,3 +178,56 @@ footer {
 .item.south  { background-color: #EF476F22; }
 .item.east   { background-color: #06D6A022; }
 .item.west   { background-color: #118AB222; }
+
+/* Hide/show form */
+.hidden {
+  display: none;
+}
+
+#add-form {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 1rem;
+}
+
+#add-form h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+#add-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#add-form input,
+#add-form textarea {
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #999;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-buttons button[type="submit"] {
+  background: #06d6a0;
+  border-color: #06d6a0;
+  color: #fff;
+}
+
+.form-buttons button[type="submit"]:hover {
+  background: #05b88a;
+}

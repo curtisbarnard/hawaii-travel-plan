@@ -16,21 +16,16 @@ sortSelect.innerHTML = `
 document.querySelector(".filters").prepend(sortSelect);
 
 function loadLocalState() {
-  const saved = JSON.parse(localStorage.getItem("tripState") || "{}");
-  data.forEach(item => {
-    if (saved[item.name]) {
-      item.done = saved[item.name].done;
-      item.notes = saved[item.name].notes;
-    }
-  });
+  const saved = localStorage.getItem("tripData");
+  if (saved) {
+    data = JSON.parse(saved);
+    return true;
+  }
+  return false;
 }
 
 function saveLocalState() {
-  const state = {};
-  data.forEach(item => {
-    state[item.name] = { done: item.done, notes: item.notes };
-  });
-  localStorage.setItem("tripState", JSON.stringify(state));
+  localStorage.setItem("tripData", JSON.stringify(data));
 }
 
 function render() {
@@ -96,14 +91,20 @@ function render() {
   });
 }
 
-fetch("data.json")
-  .then(res => res.json())
-  .then(json => {
-    data = json;
-    loadLocalState();
-    populateFilters();
-    render();
-  });
+if (!loadLocalState()) {
+  // if nothing in localStorage, load the base data.json
+  fetch("data.json")
+    .then(res => res.json())
+    .then(json => {
+      data = json;
+      saveLocalState(); // save initial version so we can extend it
+      populateFilters();
+      render();
+    });
+} else {
+  populateFilters();
+  render();
+}
 
 function populateFilters() {
   const types = [...new Set(data.map(i => i.type).filter(Boolean))].sort();
@@ -133,3 +134,41 @@ document.getElementById("download").addEventListener("click", () => {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 });
+
+// Form elements
+const addFormSection = document.getElementById("add-form");
+const showFormBtn = document.getElementById("show-form");
+const cancelFormBtn = document.getElementById("cancel-form");
+const addForm = addFormSection.querySelector("form");
+
+showFormBtn.addEventListener("click", () => {
+  addFormSection.classList.remove("hidden");
+});
+
+cancelFormBtn.addEventListener("click", () => {
+  addFormSection.classList.add("hidden");
+  addForm.reset();
+});
+
+addForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const newItem = {
+    name: document.getElementById("new-name").value,
+    description: document.getElementById("new-description").value,
+    maps: document.getElementById("new-maps").value,
+    type: document.getElementById("new-type").value.toLowerCase(),
+    region: document.getElementById("new-region").value.toLowerCase(),
+    town: document.getElementById("new-town").value,
+    notes: document.getElementById("new-notes").value,
+    done: false
+  };
+
+  data.push(newItem);
+  saveLocalState();
+  populateFilters();
+  render();
+
+  addForm.reset();
+  addFormSection.classList.add("hidden");
+});
+
