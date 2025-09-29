@@ -274,3 +274,16 @@ footer {
 .hidden {
   display: none;
 }
+
+#new-type-group {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem;
+  background: #fafafa;
+}
+
+#new-type-options label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}

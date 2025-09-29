@@ -29,7 +29,10 @@
         <input type="text" id="new-name" placeholder="Name" required>
         <input type="text" id="new-description" placeholder="Description">
         <input type="url" id="new-maps" placeholder="Google Maps Link">
-        <input type="text" id="new-type" placeholder="Type (e.g. hike, restaurant)" required>
+        <div id="new-type-group">
+            <label><strong>Types:</strong></label>
+            <div id="new-type-options"></div>
+        </div>
         <input type="text" id="new-region" placeholder="Region (north, south, east, west)" required>
         <input type="text" id="new-town" placeholder="Town">
         <textarea id="new-notes" placeholder="Notes"></textarea>

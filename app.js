@@ -125,6 +125,18 @@ function populateFilters() {
     `;
   });
 
+    // Build type checkboxes in Add Place form
+    const newTypeOptions = document.getElementById("new-type-options");
+    if (newTypeOptions) {
+    newTypeOptions.innerHTML = "";
+    types.forEach(t => {
+        const id = "new-type-" + t.replace(/\s+/g, "-").toLowerCase();
+        newTypeOptions.innerHTML += `
+        <label><input type="checkbox" value="${t}" id="${id}"> ${t}</label>
+        `;
+    });
+    }
+
   // Update button text and re-render on change
   typeOptions.querySelectorAll("input[type='checkbox']").forEach(cb => {
     cb.addEventListener("change", () => {
@@ -181,15 +193,16 @@ cancelFormBtn.addEventListener("click", () => {
 addForm.addEventListener("submit", e => {
   e.preventDefault();
   const newItem = {
-    name: document.getElementById("new-name").value,
-    description: document.getElementById("new-description").value,
-    maps: document.getElementById("new-maps").value,
-    type: document.getElementById("new-type").value.toLowerCase(),
-    region: document.getElementById("new-region").value.toLowerCase(),
-    town: document.getElementById("new-town").value,
-    notes: document.getElementById("new-notes").value,
-    done: false
-  };
+  name: document.getElementById("new-name").value,
+  description: document.getElementById("new-description").value,
+  maps: document.getElementById("new-maps").value,
+  type: Array.from(document.querySelectorAll("#new-type-options input:checked"))
+            .map(cb => cb.value),
+  region: document.getElementById("new-region").value.toLowerCase(),
+  town: document.getElementById("new-town").value,
+  notes: document.getElementById("new-notes").value,
+  done: false
+};
 
   data.push(newItem);
   saveLocalState();
