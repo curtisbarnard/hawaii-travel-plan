@@ -30,12 +30,11 @@ function saveLocalState() {
 
 function render() {
   listEl.innerHTML = "";
-  const typeVal = filterType.value;
   const regionVal = filterRegion.value;
   const searchVal = searchEl.value.toLowerCase();
   const sortVal = sortSelect.value;
 
-  const selectedTypes = Array.from(filterType.selectedOptions).map(opt => opt.value);
+    const selectedTypes = Array.from(document.querySelectorAll("#type-options input:checked")).map(cb => cb.value);
 
   let items = data
     .filter(i => selectedTypes.length === 0 || selectedTypes.every(t => (i.type || []).includes(t)))
@@ -109,22 +108,43 @@ if (!loadLocalState()) {
 }
 
 function populateFilters() {
-  // flatten all type arrays, deduplicate
   const types = [...new Set(data.flatMap(i => i.type || []))].sort();
   const regions = [...new Set(data.map(i => i.region).filter(Boolean))].sort();
 
-  filterType.innerHTML = ""; // reset
-  types.forEach(t => {
-    filterType.innerHTML += `<option value="${t}">${t}</option>`;
-  });
-
+  // Build region dropdown
   filterRegion.innerHTML = '<option value="">All Regions</option>';
   regions.forEach(r => filterRegion.innerHTML += `<option value="${r}">${r}</option>`);
 
-  filterType.addEventListener("change", render);
+  // Build type checkboxes
+  const typeOptions = document.getElementById("type-options");
+  typeOptions.innerHTML = "";
+  types.forEach(t => {
+    const id = "type-" + t.replace(/\s+/g, "-").toLowerCase();
+    typeOptions.innerHTML += `
+      <label><input type="checkbox" value="${t}" id="${id}"> ${t}</label>
+    `;
+  });
+
+  // Update button text and re-render on change
+  typeOptions.querySelectorAll("input[type='checkbox']").forEach(cb => {
+    cb.addEventListener("change", () => {
+      updateTypeFilterBtn();
+      render();
+    });
+  });
+
+  updateTypeFilterBtn();
+
   filterRegion.addEventListener("change", render);
   searchEl.addEventListener("input", render);
   sortSelect.addEventListener("change", render);
+}
+
+// Update button text
+function updateTypeFilterBtn() {
+  const selected = Array.from(document.querySelectorAll("#type-options input:checked")).map(cb => cb.value);
+  const btn = document.getElementById("type-filter-btn");
+  btn.textContent = selected.length > 0 ? `Filter Types (${selected.length}) ▾` : "Filter Types ▾";
 }
 
 // Download current state as JSON
@@ -180,3 +200,16 @@ addForm.addEventListener("submit", e => {
   addFormSection.classList.add("hidden");
 });
 
+const typeFilterBtn = document.getElementById("type-filter-btn");
+const typeOptions = document.getElementById("type-options");
+
+typeFilterBtn.addEventListener("click", () => {
+  typeOptions.classList.toggle("hidden");
+});
+
+// Close if clicking outside
+document.addEventListener("click", (e) => {
+  if (!document.getElementById("type-filter").contains(e.target)) {
+    typeOptions.classList.add("hidden");
+  }
+});

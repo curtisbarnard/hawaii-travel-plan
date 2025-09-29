@@ -10,8 +10,10 @@
   <header>
     <h1>🌺 Hawaii Trip</h1>
     <div class="filters">
-        <select id="filter-type" multiple size="4">
-        </select>
+        <div class="dropdown" id="type-filter">
+            <button id="type-filter-btn">Filter Types ▾</button>
+            <div class="dropdown-content hidden" id="type-options"></div>
+        </div>
         <select id="filter-region">
         <option value="">All Regions</option>
         </select>
