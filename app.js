@@ -240,27 +240,46 @@ document.getElementById("download").addEventListener("click", () => {
 
 // Reset data to original data.json
 document.getElementById("reset-data").addEventListener("click", () => {
-  if (confirm("Are you sure you want to reset all data to the original? This will remove all your notes and progress.")) {
-    // Clear local storage
-    localStorage.removeItem("tripData");
-    
-    // Reload original data from data.json
-    fetch("data.json")
-      .then(res => res.json())
-      .then(json => {
-        data = json;
-        saveLocalState(); // save fresh version
-        populateFilters();
-        render();
-        
-        // Close the menu after reset
-        document.getElementById("menu-options").classList.add("hidden");
-        document.getElementById("menu-toggle").classList.remove("active");
-      })
-      .catch(error => {
-        console.error("Error loading original data:", error);
-        alert("Error resetting data. Please refresh the page.");
-      });
+  // Show custom confirmation modal
+  document.getElementById("confirm-modal").classList.remove("hidden");
+  
+  // Close the hamburger menu
+  document.getElementById("menu-options").classList.add("hidden");
+  document.getElementById("menu-toggle").classList.remove("active");
+});
+
+// Handle confirmation modal buttons
+document.getElementById("confirm-reset").addEventListener("click", () => {
+  // Hide modal
+  document.getElementById("confirm-modal").classList.add("hidden");
+  
+  // Clear local storage
+  localStorage.removeItem("tripData");
+  
+  // Reload original data from data.json
+  fetch("data.json")
+    .then(res => res.json())
+    .then(json => {
+      data = json;
+      saveLocalState(); // save fresh version
+      populateFilters();
+      render();
+    })
+    .catch(error => {
+      console.error("Error loading original data:", error);
+      alert("Error resetting data. Please refresh the page.");
+    });
+});
+
+document.getElementById("cancel-reset").addEventListener("click", () => {
+  // Just hide the modal
+  document.getElementById("confirm-modal").classList.add("hidden");
+});
+
+// Close modal when clicking outside
+document.getElementById("confirm-modal").addEventListener("click", (e) => {
+  if (e.target === document.getElementById("confirm-modal")) {
+    document.getElementById("confirm-modal").classList.add("hidden");
   }
 });
 
