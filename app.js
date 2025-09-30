@@ -202,6 +202,32 @@ document.getElementById("download").addEventListener("click", () => {
   URL.revokeObjectURL(url);
 });
 
+// Reset data to original data.json
+document.getElementById("reset-data").addEventListener("click", () => {
+  if (confirm("Are you sure you want to reset all data to the original? This will remove all your notes and progress.")) {
+    // Clear local storage
+    localStorage.removeItem("tripData");
+    
+    // Reload original data from data.json
+    fetch("data.json")
+      .then(res => res.json())
+      .then(json => {
+        data = json;
+        saveLocalState(); // save fresh version
+        populateFilters();
+        render();
+        
+        // Close the menu after reset
+        document.getElementById("menu-options").classList.add("hidden");
+        document.getElementById("menu-toggle").classList.remove("active");
+      })
+      .catch(error => {
+        console.error("Error loading original data:", error);
+        alert("Error resetting data. Please refresh the page.");
+      });
+  }
+});
+
 // Form elements
 const addFormSection = document.getElementById("add-form");
 const showFormBtn = document.getElementById("show-form");
