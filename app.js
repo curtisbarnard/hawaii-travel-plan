@@ -177,13 +177,13 @@ function populateFilters() {
 function updateTypeFilterBtn() {
   const selected = Array.from(document.querySelectorAll("#type-options input:checked")).map(cb => cb.value);
   const btn = document.getElementById("type-filter-btn");
-  btn.textContent = selected.length > 0 ? `Filter Types (${selected.length}) ▾` : "Filter Types ▾";
+  btn.textContent = selected.length > 0 ? `Type (${selected.length}) ↓` : "Type ↓";
 }
 
 function updateRegionFilterBtn() {
   const selected = Array.from(document.querySelectorAll("#region-options input:checked")).map(cb => cb.value);
   const btn = document.getElementById("region-filter-btn");
-  btn.textContent = selected.length > 0 ? `Filter Regions (${selected.length}) ▾` : "Filter Regions ▾";
+  btn.textContent = selected.length > 0 ? `Region (${selected.length}) ↓` : "Region ↓";
 }
 
 // Download current state as JSON
@@ -256,6 +256,15 @@ regionFilterBtn.addEventListener("click", () => {
   regionOptions.classList.toggle("hidden");
 });
 
+// Hamburger menu functionality
+const menuToggle = document.getElementById("menu-toggle");
+const menuOptions = document.getElementById("menu-options");
+
+menuToggle.addEventListener("click", () => {
+  menuOptions.classList.toggle("hidden");
+  menuToggle.classList.toggle("active");
+});
+
 // Close if clicking outside
 document.addEventListener("click", (e) => {
   if (!document.getElementById("type-filter").contains(e.target)) {
@@ -263,5 +272,9 @@ document.addEventListener("click", (e) => {
   }
   if (!document.getElementById("region-filter").contains(e.target)) {
     regionOptions.classList.add("hidden");
+  }
+  if (!document.querySelector(".hamburger-menu").contains(e.target)) {
+    menuOptions.classList.add("hidden");
+    menuToggle.classList.remove("active");
   }
 });

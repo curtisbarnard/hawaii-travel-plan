@@ -8,19 +8,30 @@
 </head>
 <body>
   <header>
-    <h1>🌺 Hawaii Trip</h1>
+    <div class="header-top">
+      <h1>🌺 Hawaii Trip</h1>
+      <div class="hamburger-menu">
+        <button id="menu-toggle" class="hamburger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="menu-dropdown hidden" id="menu-options">
+          <button id="show-form">➕ Add Place</button>
+          <button id="download">⬇️ Save Data</button>
+        </div>
+      </div>
+    </div>
     <div class="filters">
         <div class="dropdown" id="type-filter">
-            <button id="type-filter-btn">Filter Types ▾</button>
+            <button id="type-filter-btn">Type     ↓</button>
             <div class="dropdown-content hidden" id="type-options"></div>
         </div>
         <div class="dropdown" id="region-filter">
-            <button id="region-filter-btn">Filter Regions ▾</button>
+            <button id="region-filter-btn">Region     ↓</button>
             <div class="dropdown-content hidden" id="region-options"></div>
         </div>
         <input type="text" id="search" placeholder="Search...">
-        <button id="download">⬇️ Save</button>
-        <button id="show-form">➕ Add</button>
     </div>
   </header>
   <!-- Hidden form -->
