@@ -9,7 +9,13 @@
 <body>
   <header>
     <div class="header-top">
-      <h1>🌺 Hawaii Trip</h1>
+      <h1>🌺 Hawaii</h1>
+      <div class="map-legend">
+        <span class="legend north">North</span>
+        <span class="legend south">South</span>
+        <span class="legend east">East</span>
+        <span class="legend west">West</span>
+      </div>
       <div class="hamburger-menu">
         <button id="menu-toggle" class="hamburger-btn">
           <span></span>
@@ -22,20 +28,21 @@
         </div>
       </div>
     </div>
-    <div class="filters">
-        <div class="dropdown" id="type-filter">
-            <button id="type-filter-btn">Type     ↓</button>
-            <div class="dropdown-content hidden" id="type-options"></div>
-        </div>
-        <div class="dropdown" id="region-filter">
-            <button id="region-filter-btn">Region     ↓</button>
-            <div class="dropdown-content hidden" id="region-options"></div>
-        </div>
-        <input type="text" id="search" placeholder="Search...">
-    </div>
+    
   </header>
+  <div class="filters">
+      <div class="dropdown" id="type-filter">
+          <button id="type-filter-btn">Type     ↓</button>
+          <div class="dropdown-content hidden" id="type-options"></div>
+      </div>
+      <div class="dropdown" id="region-filter">
+          <button id="region-filter-btn">Region     ↓</button>
+          <div class="dropdown-content hidden" id="region-options"></div>
+      </div>
+      <input type="text" id="search" placeholder="Search...">
+  </div>
   <!-- Hidden form -->
-    <section id="add-form" class="hidden">
+  <section id="add-form" class="hidden">
     <h2>Add a Place</h2>
     <form>
         <input type="text" id="new-name" placeholder="Name" required>
@@ -55,16 +62,7 @@
         <button type="button" id="cancel-form">Cancel</button>
         </div>
     </form>
-    </section>
-
-  <section id="map">
-  <div class="map-legend">
-    <span class="legend north">North</span>
-    <span class="legend south">South</span>
-    <span class="legend east">East</span>
-    <span class="legend west">West</span>
-  </div>
-</section>
+  </section>
   <main id="list"></main>
 
   <footer>

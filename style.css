@@ -22,7 +22,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
 }
 
 header h1 {
@@ -117,6 +116,7 @@ header h1 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.5rem;
+  padding: 1rem;
 }
 
 .filters select,
@@ -239,15 +239,7 @@ footer {
 }
 
 /* Map section */
-#map {
-  text-align: center;
-  padding: 0.5rem;
-  border-bottom: 1px solid #ddd;
-  background: #fafafa;
-}
-
 .map-legend {
-  margin-top: 0.25rem;
   font-size: 0.8rem;
   display: flex;
   justify-content: center;
