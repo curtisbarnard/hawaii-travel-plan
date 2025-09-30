@@ -216,8 +216,11 @@ header h1 {
   width: calc(100% - 2rem);
   border: 1px solid #ddd;
   border-radius: 4px;
-  resize: vertical;
+  resize: none;
   min-height: 2rem;
+  overflow-y: hidden;
+  line-height: 1.4;
+  box-sizing: border-box;
 }
 
 /* Done state */

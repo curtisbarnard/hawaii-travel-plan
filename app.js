@@ -26,6 +26,27 @@ function saveLocalState() {
   localStorage.setItem("tripData", JSON.stringify(data));
 }
 
+// Auto-resize textarea function
+function autoResizeTextarea(textarea) {
+  textarea.style.height = 'auto';
+  textarea.style.height = textarea.scrollHeight + 'px';
+}
+
+// Apply auto-resize to all textareas
+function initAutoResize() {
+  document.querySelectorAll('textarea').forEach(textarea => {
+    // Set initial height
+    autoResizeTextarea(textarea);
+    
+    // Add event listeners for auto-resize
+    textarea.addEventListener('input', () => autoResizeTextarea(textarea));
+    textarea.addEventListener('paste', () => {
+      // Small delay to allow paste content to be processed
+      setTimeout(() => autoResizeTextarea(textarea), 10);
+    });
+  });
+}
+
 function render() {
   listEl.innerHTML = "";
   const searchVal = searchEl.value.toLowerCase();
@@ -84,10 +105,17 @@ function render() {
     textarea.addEventListener("input", () => {
       item.notes = textarea.value;
       saveLocalState();
+      autoResizeTextarea(textarea);
     });
+
+    // Initialize auto-resize for this textarea
+    autoResizeTextarea(textarea);
 
     listEl.appendChild(row);
   });
+
+  // Initialize auto-resize for any other textareas (like in forms)
+  initAutoResize();
 }
 
 if (!loadLocalState()) {
