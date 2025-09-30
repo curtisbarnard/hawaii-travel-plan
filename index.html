@@ -14,9 +14,10 @@
             <button id="type-filter-btn">Filter Types ▾</button>
             <div class="dropdown-content hidden" id="type-options"></div>
         </div>
-        <select id="filter-region">
-        <option value="">All Regions</option>
-        </select>
+        <div class="dropdown" id="region-filter">
+            <button id="region-filter-btn">Filter Regions ▾</button>
+            <div class="dropdown-content hidden" id="region-options"></div>
+        </div>
         <input type="text" id="search" placeholder="Search...">
         <button id="download">⬇️ Save</button>
         <button id="show-form">➕ Add</button>
@@ -33,7 +34,9 @@
             <label><strong>Types:</strong></label>
             <div id="new-type-options"></div>
         </div>
-        <input type="text" id="new-region" placeholder="Region (north, south, east, west)" required>
+        <select id="new-region" required>
+            <option value="">Select Region</option>
+        </select>
         <input type="text" id="new-town" placeholder="Town">
         <textarea id="new-notes" placeholder="Notes"></textarea>
         <div class="form-buttons">

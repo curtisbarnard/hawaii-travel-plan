@@ -43,6 +43,7 @@ header h1 {
   border-radius: 6px;
   background: #f5f5f5;
   cursor: pointer;
+  width: 100%;
 }
 
 .filters button:hover {

@@ -1,7 +1,5 @@
 let data = [];
 const listEl = document.getElementById("list");
-const filterType = document.getElementById("filter-type");
-const filterRegion = document.getElementById("filter-region");
 const searchEl = document.getElementById("search");
 
 // Add sort dropdown dynamically
@@ -30,15 +28,15 @@ function saveLocalState() {
 
 function render() {
   listEl.innerHTML = "";
-  const regionVal = filterRegion.value;
   const searchVal = searchEl.value.toLowerCase();
   const sortVal = sortSelect.value;
 
-    const selectedTypes = Array.from(document.querySelectorAll("#type-options input:checked")).map(cb => cb.value);
+  const selectedTypes = Array.from(document.querySelectorAll("#type-options input:checked")).map(cb => cb.value);
+  const selectedRegions = Array.from(document.querySelectorAll("#region-options input:checked")).map(cb => cb.value);
 
   let items = data
     .filter(i => selectedTypes.length === 0 || selectedTypes.every(t => (i.type || []).includes(t)))
-    .filter(i => !regionVal || i.region === regionVal)
+    .filter(i => selectedRegions.length === 0 || selectedRegions.includes(i.region))
     .filter(i => i.name.toLowerCase().includes(searchVal));
 
   // Sorting
@@ -111,9 +109,24 @@ function populateFilters() {
   const types = [...new Set(data.flatMap(i => i.type || []))].sort();
   const regions = [...new Set(data.map(i => i.region).filter(Boolean))].sort();
 
-  // Build region dropdown
-  filterRegion.innerHTML = '<option value="">All Regions</option>';
-  regions.forEach(r => filterRegion.innerHTML += `<option value="${r}">${r}</option>`);
+  // Build region checkboxes for filtering
+  const regionOptions = document.getElementById("region-options");
+  regionOptions.innerHTML = "";
+  regions.forEach(r => {
+    const id = "region-" + r.replace(/\s+/g, "-").toLowerCase();
+    regionOptions.innerHTML += `
+      <label><input type="checkbox" value="${r}" id="${id}" checked> ${r}</label>
+    `;
+  });
+
+  // Build region dropdown for add form
+  const newRegionSelect = document.getElementById("new-region");
+  if (newRegionSelect) {
+    newRegionSelect.innerHTML = '<option value="">Select Region</option>';
+    regions.forEach(r => {
+      newRegionSelect.innerHTML += `<option value="${r}">${r}</option>`;
+    });
+  }
 
   // Build type checkboxes
   const typeOptions = document.getElementById("type-options");
@@ -125,19 +138,19 @@ function populateFilters() {
     `;
   });
 
-    // Build type checkboxes in Add Place form
-    const newTypeOptions = document.getElementById("new-type-options");
-    if (newTypeOptions) {
+  // Build type checkboxes in Add Place form
+  const newTypeOptions = document.getElementById("new-type-options");
+  if (newTypeOptions) {
     newTypeOptions.innerHTML = "";
     types.forEach(t => {
-        const id = "new-type-" + t.replace(/\s+/g, "-").toLowerCase();
-        newTypeOptions.innerHTML += `
+      const id = "new-type-" + t.replace(/\s+/g, "-").toLowerCase();
+      newTypeOptions.innerHTML += `
         <label><input type="checkbox" value="${t}" id="${id}"> ${t}</label>
-        `;
+      `;
     });
-    }
+  }
 
-  // Update button text and re-render on change
+  // Update button text and re-render on change for types
   typeOptions.querySelectorAll("input[type='checkbox']").forEach(cb => {
     cb.addEventListener("change", () => {
       updateTypeFilterBtn();
@@ -145,9 +158,17 @@ function populateFilters() {
     });
   });
 
-  updateTypeFilterBtn();
+  // Update button text and re-render on change for regions
+  regionOptions.querySelectorAll("input[type='checkbox']").forEach(cb => {
+    cb.addEventListener("change", () => {
+      updateRegionFilterBtn();
+      render();
+    });
+  });
 
-  filterRegion.addEventListener("change", render);
+  updateTypeFilterBtn();
+  updateRegionFilterBtn();
+
   searchEl.addEventListener("input", render);
   sortSelect.addEventListener("change", render);
 }
@@ -157,6 +178,12 @@ function updateTypeFilterBtn() {
   const selected = Array.from(document.querySelectorAll("#type-options input:checked")).map(cb => cb.value);
   const btn = document.getElementById("type-filter-btn");
   btn.textContent = selected.length > 0 ? `Filter Types (${selected.length}) ▾` : "Filter Types ▾";
+}
+
+function updateRegionFilterBtn() {
+  const selected = Array.from(document.querySelectorAll("#region-options input:checked")).map(cb => cb.value);
+  const btn = document.getElementById("region-filter-btn");
+  btn.textContent = selected.length > 0 ? `Filter Regions (${selected.length}) ▾` : "Filter Regions ▾";
 }
 
 // Download current state as JSON
@@ -192,13 +219,16 @@ cancelFormBtn.addEventListener("click", () => {
 
 addForm.addEventListener("submit", e => {
   e.preventDefault();
+  const regionValue = document.getElementById("new-region").value;
+  const capitalizedRegion = regionValue.charAt(0).toUpperCase() + regionValue.slice(1).toLowerCase();
+  
   const newItem = {
   name: document.getElementById("new-name").value,
   description: document.getElementById("new-description").value,
   maps: document.getElementById("new-maps").value,
   type: Array.from(document.querySelectorAll("#new-type-options input:checked"))
             .map(cb => cb.value),
-  region: document.getElementById("new-region").value.toLowerCase(),
+  region: capitalizedRegion,
   town: document.getElementById("new-town").value,
   notes: document.getElementById("new-notes").value,
   done: false
@@ -215,14 +245,23 @@ addForm.addEventListener("submit", e => {
 
 const typeFilterBtn = document.getElementById("type-filter-btn");
 const typeOptions = document.getElementById("type-options");
+const regionFilterBtn = document.getElementById("region-filter-btn");
+const regionOptions = document.getElementById("region-options");
 
 typeFilterBtn.addEventListener("click", () => {
   typeOptions.classList.toggle("hidden");
+});
+
+regionFilterBtn.addEventListener("click", () => {
+  regionOptions.classList.toggle("hidden");
 });
 
 // Close if clicking outside
 document.addEventListener("click", (e) => {
   if (!document.getElementById("type-filter").contains(e.target)) {
     typeOptions.classList.add("hidden");
+  }
+  if (!document.getElementById("region-filter").contains(e.target)) {
+    regionOptions.classList.add("hidden");
   }
 });
