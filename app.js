@@ -51,6 +51,7 @@ function render() {
   listEl.innerHTML = "";
   const searchVal = searchEl.value.toLowerCase();
   const sortVal = sortSelect.value;
+  const hideCompleted = document.getElementById("hide-completed")?.checked ?? true;
 
   const selectedTypes = Array.from(document.querySelectorAll("#type-options input:checked")).map(cb => cb.value);
   const selectedRegions = Array.from(document.querySelectorAll("#region-options input:checked")).map(cb => cb.value);
@@ -58,7 +59,8 @@ function render() {
   let items = data
     .filter(i => selectedTypes.length === 0 || selectedTypes.every(t => (i.type || []).includes(t)))
     .filter(i => selectedRegions.length === 0 || selectedRegions.includes(i.region))
-    .filter(i => i.name.toLowerCase().includes(searchVal));
+    .filter(i => i.name.toLowerCase().includes(searchVal))
+    .filter(i => !hideCompleted || !i.done);
 
   // Sorting
   items.sort((a, b) => {
@@ -199,6 +201,12 @@ function populateFilters() {
 
   searchEl.addEventListener("input", render);
   sortSelect.addEventListener("change", render);
+
+  // Add event listener for hide completed checkbox
+  const hideCompletedCheckbox = document.getElementById("hide-completed");
+  if (hideCompletedCheckbox) {
+    hideCompletedCheckbox.addEventListener("change", render);
+  }
 }
 
 // Update button text

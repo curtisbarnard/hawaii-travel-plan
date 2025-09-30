@@ -141,9 +141,29 @@ header h1 {
   background: #eaeaea;
 }
 
+.hide-completed-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide-completed-filter label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.hide-completed-filter input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+}
+
 @media (min-width: 600px) {
   .filters {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
