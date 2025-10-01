@@ -1,6 +1,7 @@
 let data = [];
 const listEl = document.getElementById("list");
 const searchEl = document.getElementById("search");
+let userLocation = null;
 
 // Add sort dropdown dynamically
 const sortSelect = document.createElement("select");
@@ -10,8 +11,73 @@ sortSelect.innerHTML = `
   <option value="type">Sort: Type</option>
   <option value="region">Sort: Region</option>
   <option value="town">Sort: Town</option>
+  <option value="distance" selected>Sort: Distance</option>
 `;
 document.querySelector(".filters").prepend(sortSelect);
+
+// Geolocation and distance calculation functions
+function getUserLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        userLocation = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        calculateDistances();
+        render();
+      },
+      (error) => {
+        console.error('Error getting user location:', error);
+        // Still render the app even if geolocation fails
+        render();
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 300000 // Cache for 5 minutes
+      }
+    );
+  } else {
+    console.error('Geolocation is not supported by this browser.');
+    render();
+  }
+}
+
+// Calculate distance between two points using Haversine formula
+function calculateDistance(lat1, lng1, lat2, lng2) {
+  const R = 3959; // Earth's radius in miles
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+    Math.sin(dLng / 2) * Math.sin(dLng / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c; // Distance in miles
+}
+
+// Calculate distances for all items
+function calculateDistances() {
+  if (!userLocation) return;
+  
+  data.forEach(item => {
+    if (item.coordinates) {
+      const [lat, lng] = item.coordinates.split(',').map(coord => parseFloat(coord.trim()));
+      if (!isNaN(lat) && !isNaN(lng)) {
+        item.distance = calculateDistance(
+          userLocation.lat,
+          userLocation.lng,
+          lat,
+          lng
+        );
+      } else {
+        item.distance = null;
+      }
+    } else {
+      item.distance = null;
+    }
+  });
+}
 
 function loadLocalState() {
   const saved = localStorage.getItem("tripData");
@@ -64,9 +130,17 @@ function render() {
 
   // Sorting
   items.sort((a, b) => {
-    if (!a[sortVal]) return 1;
-    if (!b[sortVal]) return -1;
-    return a[sortVal].toString().localeCompare(b[sortVal].toString());
+    if (sortVal === 'distance') {
+      // Handle distance sorting specially
+      if (a.distance === null && b.distance === null) return 0;
+      if (a.distance === null) return 1;
+      if (b.distance === null) return -1;
+      return a.distance - b.distance;
+    } else {
+      if (!a[sortVal]) return 1;
+      if (!b[sortVal]) return -1;
+      return a[sortVal].toString().localeCompare(b[sortVal].toString());
+    }
   });
 
   items.forEach(item => {
@@ -88,6 +162,7 @@ function render() {
         ${item.description || ""}
     </div>
     <div class="item-info">
+        ${item.distance !== null && item.distance !== undefined ? `<span>Distance: ${item.distance.toFixed(1)} mi</span>` : '<span>Distance: Unknown</span>'}
         <span>Type: ${(item.type || []).join(", ") || "-"}</span>
         <span>Region: ${item.region || "-"}</span>
         <span>${item.town ? "Town: " + item.town : ""}</span>
@@ -129,10 +204,12 @@ if (!loadLocalState()) {
       saveLocalState(); // save initial version so we can extend it
       populateFilters();
       render();
+      getUserLocation(); // Get user location after initial render
     });
 } else {
   populateFilters();
   render();
+  getUserLocation(); // Get user location after initial render
 }
 
 function populateFilters() {

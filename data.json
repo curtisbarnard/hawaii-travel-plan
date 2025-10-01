@@ -3,6 +3,7 @@
     "name": "Pau Hana Poke",
     "description": "",
     "maps": "https://maps.app.goo.gl/vidnyPKSitVJbgnZ7",
+    "coordinates": "19.68818643942828, -156.01610342882722",
     "type": [
       "Restaurant"
     ],
@@ -12,11 +13,12 @@
     "done": false
   },
   {
-    "name": "Mauna Kea",
+    "name": "Mauna Kea Mid-Level Observatory",
     "description": "",
-    "maps": "",
+    "maps": "https://maps.app.goo.gl/t1wJahkjRmPHJKuG6",
+    "coordinates": "19.76172698447164, -155.4557217905255",
     "type": [
-      "Hike"
+      "Hike, Sight"
     ],
     "region": "North",
     "town": "",
@@ -27,6 +29,7 @@
     "name": "Kamakahonu Beach",
     "description": "Located at King Kamehameha Kona Beach Hotel. Not sure about parking.",
     "maps": "https://maps.app.goo.gl/ZrxmqV83RP5psnM17",
+    "coordinates": "19.63956912924782, -155.9977768210922",
     "type": [
       "Child friendly beach"
     ],
@@ -39,6 +42,7 @@
     "name": "Wawaloli Beach Park",
     "description": "Located by the Natural Energy Lab Kona. Offers a very calm and shallow sandy area as well as a rough high wave rocky area. Snorkeling opportunities here are great.",
     "maps": "https://maps.app.goo.gl/bPz4NR7QAubhmLZC8",
+    "coordinates": "19.71644550585769, -156.04996494516303",
     "type": [
       "Child friendly beach",
       "Snorkel"
@@ -52,6 +56,7 @@
     "name": "Onekahakaha Beach Park",
     "description": "Sheltered wading pool along the eastern park of the park",
     "maps": "https://maps.app.goo.gl/P9ZGQKfKustmqAFBA",
+    "coordinates": "19.737731826494148, -155.03763000050947",
     "type": [
       "Child friendly beach"
     ],
@@ -64,6 +69,7 @@
     "name": "Keiki Beach",
     "description": "",
     "maps": "https://maps.app.goo.gl/NbvjLnnH8bREb3hKA",
+    "coordinates": "19.638416026801682, -156.00264386336733",
     "type": [
       "Child friendly beach"
     ],
@@ -76,6 +82,7 @@
     "name": "Kamakana Playground",
     "description": "",
     "maps": "https://maps.app.goo.gl/vLd38roiGfypZFpM6",
+    "coordinates": "19.552201817531806, -155.93664066476117",
     "type": [
       "Playground"
     ],
@@ -88,6 +95,7 @@
     "name": "Anuenue Playground",
     "description": "",
     "maps": "https://maps.app.goo.gl/NuHwP3xT5k2XdriX6",
+    "coordinates": "20.022065917336793, -155.67053891371472",
     "type": [
       "Playground"
     ],
@@ -100,6 +108,7 @@
     "name": "Gilbert Kahele Recreation Area Playground",
     "description": "Possibly closed?",
     "maps": "https://maps.app.goo.gl/Uuz3z2pdeDzNbdwQ7",
+    "coordinates": "19.74878232270918, -155.52624515193153",
     "type": [
       "Playground"
     ],
@@ -112,6 +121,7 @@
     "name": "Mokupāpapa Discovery Center",
     "description": "",
     "maps": "https://maps.app.goo.gl/BHSqcsnzhv12PF9PA",
+    "coordinates": "19.726634526400566, -155.08700743893263",
     "type": [
       "Kid experience"
     ],
@@ -124,6 +134,7 @@
     "name": "Mokuaikaua Church",
     "description": "Built in 1820 and free",
     "maps": "https://maps.app.goo.gl/9L9nQUoZUvtz6JTM8",
+    "coordinates": "19.639603301031144, -155.99374994299734",
     "type": [
       "History"
     ],
@@ -136,6 +147,7 @@
     "name": "Don the Beachcomber",
     "description": "Not great food and drink, but good sunset",
     "maps": "https://maps.app.goo.gl/R4uDtcEAa7Tmw1ZT6",
+    "coordinates": "19.632437384220562, -155.990289493253",
     "type": [
       "Restaurant"
     ],
@@ -148,6 +160,7 @@
     "name": "Zippy's",
     "description": "",
     "maps": "https://maps.app.goo.gl/s4y4vrBRMBviCyYMA",
+    "coordinates": "19.696819618884724, -155.06432105673102",
     "type": [
       "Restaurant"
     ],
@@ -160,6 +173,7 @@
     "name": "Kaumana Caves Lava Tube",
     "description": "",
     "maps": "https://maps.app.goo.gl/mUN5LJirF3vBqcmf8",
+    "coordinates": "19.686867631328603, -155.13083580929407",
     "type": [
       "Hike"
     ],
@@ -172,6 +186,7 @@
     "name": "Hilo Farmers Market",
     "description": "",
     "maps": "https://maps.app.goo.gl/Pfj9MuEqmW5phfqe9",
+    "coordinates": "19.72296604854268, -155.08479962795462",
     "type": [
       "Market"
     ],
@@ -181,21 +196,10 @@
     "done": false
   },
   {
-    "name": "Kīlauea",
-    "description": "Go at night to try and see the glow of the lava",
-    "maps": "https://maps.app.goo.gl/GvfzwDJaSo6U4Nsx6",
-    "type": [
-      "Sight"
-    ],
-    "region": "South",
-    "town": "Volcano",
-    "notes": "",
-    "done": false
-  },
-  {
     "name": "Nāhuku Lava Tube",
     "description": "Also called the Thursdton lava tube. This is 1/2 mile hike. Lit from 8am to 8pm, and much less crowded at nightime.",
     "maps": "https://maps.app.goo.gl/Yw9cx2V3XBr6daNC9",
+    "coordinates": "19.41367679076264, -155.2387393818057",
     "type": [
       "Hike"
     ],
@@ -208,6 +212,7 @@
     "name": "Sulphur Banks Trail",
     "description": "3/4 mile hike, Not good for children.",
     "maps": "https://maps.app.goo.gl/HiRbb4Jb8FaoqYio9",
+    "coordinates": "19.43141135470354, -155.26724818172806",
     "type": [
       "Hike"
     ],
@@ -220,6 +225,7 @@
     "name": "Kīpuka Puaulu Trail",
     "description": "1.6 mile hike",
     "maps": "https://maps.app.goo.gl/UMwG7PvZmA1q2WeH7",
+    "coordinates": "19.437557509460667, -155.3031721341319",
     "type": [
       "Hike"
     ],
@@ -232,6 +238,7 @@
     "name": "Punalu'u Black Sand Beach",
     "description": "The water is cold due to a spring offshore",
     "maps": "https://maps.app.goo.gl/ZaTfUgUpfNUiLVoVA",
+    "coordinates": "19.136241317467892, -155.50472307928575",
     "type": [
       "Beach"
     ],
@@ -244,6 +251,7 @@
     "name": "Greenwell Farms",
     "description": "Coffee farm with free tours",
     "maps": "https://maps.app.goo.gl/rKEcDwfptdKJaDEA6",
+    "coordinates": "19.510946532720386, -155.92038890526197",
     "type": [
       "Sight"
     ],
@@ -256,6 +264,7 @@
     "name": "Island Gourmet Market",
     "description": "I think this is like a fancy ABC",
     "maps": "https://maps.app.goo.gl/rhhsNdoBshtFrYwr6",
+    "coordinates": "19.913828194943047, -155.8809908155275",
     "type": [
       "Market"
     ],
@@ -268,6 +277,7 @@
     "name": "Puakō Petroglyphs",
     "description": "Park at Malama trailhead",
     "maps": "https://maps.app.goo.gl/uM4Xvv2xVg2GWEJy6",
+    "coordinates": "19.95520847750493, -155.85942081735482",
     "type": [
       "Hike"
     ],
@@ -280,6 +290,7 @@
     "name": "Hilton Waikoloa Village",
     "description": "",
     "maps": "https://maps.app.goo.gl/RNxPa5hQDdAXWACk7",
+    "coordinates": "19.92357064103036, -155.88780880518746",
     "type": [
       "Kid experience"
     ],
@@ -292,6 +303,7 @@
     "name": "Parker Ranch",
     "description": "",
     "maps": "https://maps.app.goo.gl/TDtyDEbga1Rrx4Qp7",
+    "coordinates": "20.019808110760295, -155.6820500743033",
     "type": [
       "History"
     ],
@@ -304,6 +316,7 @@
     "name": "Waialea Bay",
     "description": "",
     "maps": "https://maps.app.goo.gl/yHvjdybP6bdH9VXF6",
+    "coordinates": "19.98101779843204, -155.8274064234992",
     "type": [
       "Snorkel"
     ],
@@ -316,6 +329,7 @@
     "name": "Richardson Ocean Park",
     "description": "Turtles here?",
     "maps": "https://maps.app.goo.gl/QcziN1dgiW85eD4L9",
+    "coordinates": "19.734913132548275, -155.0131349195349",
     "type": [
       "Snorkel"
     ],
@@ -328,6 +342,7 @@
     "name": "Puka Puka Kitchen",
     "description": "Curry and bento",
     "maps": "https://maps.app.goo.gl/rBx8LHais9kBiFoX9",
+    "coordinates": "19.7241698340703, -155.0856519483152",
     "type": [
       "Restaurant"
     ],
@@ -340,6 +355,7 @@
     "name": "Two Step Beach",
     "description": "Go left?",
     "maps": "https://maps.app.goo.gl/axVpkp7Fx3HdqfzR9",
+    "coordinates": "19.423393780546387, -155.91117034321988",
     "type": [
       "Snorkel"
     ],
@@ -352,6 +368,7 @@
     "name": "Captain Cook Snorkeling",
     "description": "Requires a kayak or a long hike. This is where Captain Cook was killed.",
     "maps": "https://maps.app.goo.gl/cNP4Ht9Q9u8bzbzf7",
+    "coordinates": "19.492074659575017, -155.91797220960996",
     "type": [
       "Snorkel",
       "History"
@@ -365,8 +382,10 @@
     "name": "Kikaua Point Park",
     "description": "Have to go early as there are only 20 spots to park. Also good for kids.",
     "maps": "https://maps.app.goo.gl/bu6ZSN5xvoKtAuKw9",
+    "coordinates": "19.815201091394982, -156.00041156139596",
     "type": [
-      "Snorkel"
+      "Snorkel",
+      "Child friendly beach"
     ],
     "region": "West",
     "town": "Kona",
@@ -377,6 +396,7 @@
     "name": "Government Beach Road",
     "description": "A scenic drive through dense jungle, narrow road",
     "maps": "https://maps.app.goo.gl/mZQ37bMfJsgZPCZj8",
+    "coordinates": "19.538377955865442, -154.8499153875403",
     "type": [
       "Sight"
     ],
@@ -389,6 +409,7 @@
     "name": "Lili'uokalani Gardens & Coconut Island",
     "description": "",
     "maps": "https://maps.app.goo.gl/SXXZuPBS68vfBjqG7",
+    "coordinates": "19.72594190826224, -155.06966148518543",
     "type": [
       "Hike"
     ],
@@ -401,6 +422,7 @@
     "name": "Pu'uloa Petroglyphs",
     "description": "1.4 mile hike that is completely exposed with no shade",
     "maps": "https://maps.app.goo.gl/62i4MBhkq2Z5m9Ki6",
+    "coordinates": "19.288847956302693, -155.12999686660265",
     "type": [
       "Hike"
     ],
@@ -413,6 +435,7 @@
     "name": "'Akaka Falls",
     "description": "1/2 mile hike, but very popular so need to be there before 9am",
     "maps": "https://maps.app.goo.gl/BYEf5iu1D5ZFSMtw6",
+    "coordinates": "19.853946175857025, -155.15213010754223",
     "type": [
       "Hike"
     ],
@@ -425,6 +448,7 @@
     "name": "Kalopa Native Forest Trail",
     "description": "3/4 mile hike",
     "maps": "https://maps.app.goo.gl/DwDZWJD3UjtvvjKS7",
+    "coordinates": "20.037255035228778, -155.4386513255968",
     "type": [
       "Hike"
     ],
@@ -437,6 +461,7 @@
     "name": "Place of Refuge",
     "description": "1/2 mile walk. $20 per car entrance fee, nice at sunset.",
     "maps": "https://maps.app.goo.gl/X1EMFSngnvT5Vm1H7",
+    "coordinates": "19.42219749750219, -155.90980343785643",
     "type": [
       "History"
     ],
@@ -449,6 +474,7 @@
     "name": "Makaula 'Ō'ōma Trail",
     "description": "1 mile loop hike with lots of cool plants",
     "maps": "https://maps.app.goo.gl/CFGjYLyeWAN2RXWs7",
+    "coordinates": "19.71709905486628, -155.9480336632445",
     "type": [
       "Hike"
     ],
@@ -461,6 +487,7 @@
     "name": "Kahalu'u Beach Park",
     "description": "Really crowded, especially on weekends. Seems like volunteers are trying to preserve the reef.",
     "maps": "https://maps.app.goo.gl/WnU9zuyRhbwUogVx6",
+    "coordinates": "19.57924254173851, -155.9666606029221",
     "type": [
       "Snorkel"
     ],
@@ -471,8 +498,9 @@
   },
   {
     "name": "Honaunau",
-    "description": "Really good snorkeling and right next to the place of refuge",
+    "description": "Really good snorkeling and right next to the place of refuge. Same as two step?",
     "maps": "https://maps.app.goo.gl/A9DKBkctUPMcTCMg9",
+    "coordinates": "19.423267558107888, -155.91132603795074",
     "type": [
       "Snorkel"
     ],
@@ -485,6 +513,7 @@
     "name": "Kanaka Kava",
     "description": "house made traditional kava and traditional Hawaiian food",
     "maps": "https://maps.app.goo.gl/WLVXMTariaqXh4DEA",
+    "coordinates": "19.634935737589256, -155.98968654370003",
     "type": [
       "Restaurant"
     ],
@@ -497,6 +526,7 @@
     "name": "South Kona fruit stand",
     "description": "fresh fruit from the adjacent farm, smoothies",
     "maps": "https://maps.app.goo.gl/nUztuQ1sYZx6W8cf7",
+    "coordinates": "19.413052187645963, -155.8807158442886",
     "type": [
       "Restaurant"
     ],
@@ -509,6 +539,7 @@
     "name": "Road to the Sea",
     "description": "black and green sand beaches at the end of a rough road",
     "maps": "https://maps.app.goo.gl/A9N2MVUV2vBErVQa9",
+    "coordinates": "19.096009735840997, -155.8026589974129",
     "type": [
       "Beach",
       "Sight"
@@ -522,6 +553,7 @@
     "name": "South Point",
     "description": "southern most point in the US, paved drive. Boat hoists at cliffs",
     "maps": "https://maps.app.goo.gl/xA2wbiPNUNfT5auE6",
+    "coordinates": "18.91494002029568, -155.68226434809637",
     "type": [
       "Sight"
     ],
@@ -532,8 +564,9 @@
   },
   {
     "name": "Kilauea Overlook",
-    "description": "The closest you can get to the active crater",
+    "description": "The closest you can get to the active crater. Go at night to see the glow of the lava",
     "maps": "https://maps.app.goo.gl/h1JjgGXcwSAcDiBBA",
+    "coordinates": "19.42319545740373, -155.28440862315492",
     "type": [
       "Sight"
     ],
@@ -546,6 +579,7 @@
     "name": "Kilauea Iki Hike",
     "description": "3 mile loop hike, rain forest and lava crater",
     "maps": "https://maps.app.goo.gl/iLjaamLd2khagLoC9",
+    "coordinates": "19.416631674674107, -155.24285447809282",
     "type": [
       "Hike",
       "Sight"
@@ -559,11 +593,64 @@
     "name": "Hilina Pali Overlook",
     "description": "expansive view all the way down to the Sea. also lots of nene",
     "maps": "https://maps.app.goo.gl/VJDZcqomYz73jWne8",
+    "coordinates": "19.295639201642057, -155.3069340746598",
     "type": [
       "Sight"
     ],
     "region": "East",
     "town": "Volcano",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "I Luv Dumplings",
+    "description": "Chicken karaage",
+    "maps": "https://maps.app.goo.gl/CEg5SdPadMnXHRBc7",
+    "coordinates": "20.079298881949903, -155.46932493999603",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "North",
+    "town": "Ahualoa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Nori's Saimin and Snacks",
+    "description": "",
+    "maps": "https://maps.app.goo.gl/dvSVXa1xt7DWqkiQ7",
+    "coordinates": "19.717396022954393, -155.08486004677988",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "East",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Ken's House of Pancakes",
+    "description": "Diner food, open 24 hours",
+    "maps": "https://maps.app.goo.gl/trqb8xGHnpMuNYks5",
+    "coordinates": "19.72229040469836, -155.06465946958647",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "East",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Lava Thai Food",
+    "description": "",
+    "maps": "https://maps.app.goo.gl/kunVuYGNL72h9SsY9",
+    "coordinates": "19.56144888227498, -154.99342596694984",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "East",
+    "town": "Keaau",
     "notes": "",
     "done": false
   }
