@@ -1046,5 +1046,31 @@
     "town": "Hilo",
     "notes": "",
     "done": false
+  },
+  {
+    "name": "Big Island Brewhaus",
+    "description": "",
+    "maps": "https://maps.app.goo.gl/BZdHcTVr4DYKgb4T8",
+    "coordinates": "20.02480994198944, -155.66139674647818",
+    "type": [
+      "Drinks"
+    ],
+    "region": "North",
+    "town": "Waimea",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Wailuku Brew Works",
+    "description": "",
+    "maps": "https://maps.app.goo.gl/GkVena7WdbDXivpK6",
+    "coordinates": "19.637550590757694, -155.04409707041577",
+    "type": [
+      "Drinks"
+    ],
+    "region": "East",
+    "town": "Keaau",
+    "notes": "",
+    "done": false
   }
 ]
