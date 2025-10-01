@@ -409,10 +409,37 @@ addForm.addEventListener("submit", e => {
   const regionValue = document.getElementById("new-region").value;
   const capitalizedRegion = regionValue.charAt(0).toUpperCase() + regionValue.slice(1).toLowerCase();
   
+  // Get coordinates and validate format if provided
+  const coordinatesInput = document.getElementById("new-coordinates").value.trim();
+  let coordinates = null;
+  
+  if (coordinatesInput) {
+    // Validate coordinates format (lat,lng or lat, lng)
+    const coordPattern = /^-?\d+\.?\d*,\s*-?\d+\.?\d*$/;
+    if (!coordPattern.test(coordinatesInput)) {
+      alert("Invalid coordinates format. Please use: latitude,longitude (e.g., 21.3099,-157.8581)");
+      return;
+    }
+    
+    // Additional validation to check lat/lng ranges
+    const [lat, lng] = coordinatesInput.split(',').map(coord => parseFloat(coord.trim()));
+    if (lat < -90 || lat > 90) {
+      alert("Latitude must be between -90 and 90 degrees");
+      return;
+    }
+    if (lng < -180 || lng > 180) {
+      alert("Longitude must be between -180 and 180 degrees");
+      return;
+    }
+    
+    coordinates = coordinatesInput;
+  }
+  
   const newItem = {
   name: document.getElementById("new-name").value,
   description: document.getElementById("new-description").value,
   maps: document.getElementById("new-maps").value,
+  coordinates: coordinates,
   type: Array.from(document.querySelectorAll("#new-type-options input:checked"))
             .map(cb => cb.value),
   region: capitalizedRegion,
