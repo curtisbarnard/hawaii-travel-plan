@@ -61,28 +61,30 @@
     </div>
   </div>
 
-  <!-- Hidden form -->
-  <section id="add-form" class="hidden">
-    <h2>Add a Place</h2>
-    <form>
-        <input type="text" id="new-name" placeholder="Name" required>
-        <input type="text" id="new-description" placeholder="Description">
-        <input type="url" id="new-maps" placeholder="Google Maps Link">
-        <div id="new-type-group">
-            <label><strong>Types:</strong></label>
-            <div id="new-type-options"></div>
-        </div>
-        <select id="new-region" required>
-            <option value="">Select Region</option>
-        </select>
-        <input type="text" id="new-town" placeholder="Town">
-        <textarea id="new-notes" placeholder="Notes"></textarea>
-        <div class="form-buttons">
-        <button type="submit">Add</button>
-        <button type="button" id="cancel-form">Cancel</button>
-        </div>
-    </form>
-  </section>
+  <!-- Add Place Modal -->
+  <div id="add-place-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Add a Place</h2>
+      <form id="add-place-form">
+          <input type="text" id="new-name" placeholder="Name" required>
+          <input type="text" id="new-description" placeholder="Description">
+          <input type="url" id="new-maps" placeholder="Google Maps Link">
+          <div id="new-type-group">
+              <label><strong>Types:</strong></label>
+              <div id="new-type-options"></div>
+          </div>
+          <select id="new-region" required>
+              <option value="">Select Region</option>
+          </select>
+          <input type="text" id="new-town" placeholder="Town">
+          <textarea id="new-notes" placeholder="Notes"></textarea>
+          <div class="modal-buttons">
+          <button type="submit">Add</button>
+          <button type="button" id="cancel-form">Cancel</button>
+          </div>
+      </form>
+    </div>
+  </div>
   <main id="list"></main>
 
   <footer>

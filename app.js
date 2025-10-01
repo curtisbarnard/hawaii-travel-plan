@@ -378,18 +378,30 @@ document.getElementById("confirm-modal").addEventListener("click", (e) => {
 });
 
 // Form elements
-const addFormSection = document.getElementById("add-form");
+const addPlaceModal = document.getElementById("add-place-modal");
 const showFormBtn = document.getElementById("show-form");
 const cancelFormBtn = document.getElementById("cancel-form");
-const addForm = addFormSection.querySelector("form");
+const addForm = document.getElementById("add-place-form");
 
 showFormBtn.addEventListener("click", () => {
-  addFormSection.classList.remove("hidden");
+  addPlaceModal.classList.remove("hidden");
+  
+  // Close the hamburger menu
+  document.getElementById("menu-options").classList.add("hidden");
+  document.getElementById("menu-toggle").classList.remove("active");
 });
 
 cancelFormBtn.addEventListener("click", () => {
-  addFormSection.classList.add("hidden");
+  addPlaceModal.classList.add("hidden");
   addForm.reset();
+});
+
+// Close modal when clicking outside
+addPlaceModal.addEventListener("click", (e) => {
+  if (e.target === addPlaceModal) {
+    addPlaceModal.classList.add("hidden");
+    addForm.reset();
+  }
 });
 
 addForm.addEventListener("submit", e => {
@@ -415,7 +427,7 @@ addForm.addEventListener("submit", e => {
   render();
 
   addForm.reset();
-  addFormSection.classList.add("hidden");
+  addPlaceModal.classList.add("hidden");
 });
 
 const typeFilterBtn = document.getElementById("type-filter-btn");
