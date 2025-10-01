@@ -224,7 +224,7 @@
   },
   {
     "name": "Kīpuka Puaulu Trail",
-    "description": "1.6 mile hike",
+    "description": "1.6 mile hike. Lots of birds, a little cave near marker 6.",
     "maps": "https://maps.app.goo.gl/UMwG7PvZmA1q2WeH7",
     "coordinates": "19.437557509460667, -155.3031721341319",
     "type": [
@@ -1030,6 +1030,20 @@
     ],
     "region": "North",
     "town": "Halaula",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Lyman Museum",
+    "description": "geoglogy fish and plant exhibits. $7 per person",
+    "maps": "https://maps.app.goo.gl/sX5xpM3VF5F6b5LG7",
+    "coordinates": "19.7222332, -155.0904771",
+    "type": [
+      "History",
+      "Sight"
+    ],
+    "region": "East",
+    "town": "Hilo",
     "notes": "",
     "done": false
   }
