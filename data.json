@@ -653,5 +653,368 @@
     "town": "Keaau",
     "notes": "",
     "done": false
+  },
+  {
+    "name": "Kaleo's Bar and Grill",
+    "description": "Fish and chips, seems a little upscale",
+    "maps": "https://maps.app.goo.gl/jsn2E44qmMXZJEuy9",
+    "coordinates": "19.560010830316873, -154.99313477285673",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "East",
+    "town": "Keaau",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Bite The Eye",
+    "description": "Poke food truck with cocktails, also various preps of Ahi",
+    "maps": "https://maps.app.goo.gl/5JSrHJUTkcztRp4z9",
+    "coordinates": "19.542476622013666, -154.97358104368743",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "East",
+    "town": "Pahoa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Pahoa Fresh Fish",
+    "description": "Various fried seafood",
+    "maps": "https://maps.app.goo.gl/ss8soB4ebYHkJgNw9",
+    "coordinates": "19.50504988505266, -154.9572908701558",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "East",
+    "town": "Pahoa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Pu'u O'o Trail",
+    "description": "Various endemic birds and goes to kipuka (forest islands in lava). Up to 9 miles round trip. https://bigislandhikes.com/puu-oo-trail",
+    "maps": "https://maps.app.goo.gl/az8oGFFN5EEFeEML9",
+    "coordinates": "19.67691082516686, -155.38430887669682",
+    "type": [
+      "Hike"
+    ],
+    "region": "East",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "La'aloa Beach Park",
+    "description": "Also known as Magic Sands. Has a big shore break that often injures people.",
+    "maps": "https://maps.app.goo.gl/9chKP1d9pKtn7KBF7",
+    "coordinates": "19.59422667743899, -155.97177690634797",
+    "type": [
+      "Beach"
+    ],
+    "region": "West",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kona Sea Salt",
+    "description": "$27/person for a 60-minute tour. Salt from the deep ocean water.",
+    "maps": "https://maps.app.goo.gl/N2DA9mjRE4JzvhBU6",
+    "coordinates": "19.726843641408152, -156.05752504996852",
+    "type": [
+      "Sight"
+    ],
+    "region": "West",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Ocean Rider Inc",
+    "description": "Seahorse farm tours. $80/adult and $11/toddler",
+    "maps": "https://maps.app.goo.gl/GtaASC7sq1KGjd176",
+    "coordinates": "19.723010834004416, -156.05635670705516",
+    "type": [
+      "Sight",
+      "Kid experience"
+    ],
+    "region": "West",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kehena Black Sand Beach",
+    "description": "Very narrow strip of beach",
+    "maps": "https://maps.app.goo.gl/GYL5FeRk2jD46KJ8A",
+    "coordinates": "19.394903341149135, -154.929058603345",
+    "type": [
+      "Beach",
+      "Sight"
+    ],
+    "region": "East",
+    "town": "Seaview",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Teshima's Restaurant",
+    "description": "Japanese breakfast and Teishoku",
+    "maps": "https://maps.app.goo.gl/pnDE7VqShhJVTubaA",
+    "coordinates": "19.541789495542066, -155.9288900471308",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "West",
+    "town": "Kealakekua",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kuleana Rum Shack",
+    "description": "",
+    "maps": "https://maps.app.goo.gl/M9JiHjnjM7qAv1dS6",
+    "coordinates": "19.91397751283005, -155.8791698765965",
+    "type": [
+      "Drinks"
+    ],
+    "region": "North",
+    "town": "Waikoloa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Lava Lava Beach Club",
+    "description": "Dining on the beach in the sand, very expensive",
+    "maps": "https://maps.app.goo.gl/ZKvWPabKFTBuvhPt9",
+    "coordinates": "19.91330268252129, -155.88803161727787",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "North",
+    "town": "Waikoloa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Randy's Huli Chicken and Ribs",
+    "description": "",
+    "maps": "https://maps.app.goo.gl/2T1rdSxecLXBvVjv7",
+    "coordinates": "19.523118053484314, -155.92164982410227",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "West",
+    "town": "Kealakekua",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Gj's Huli Chicken",
+    "description": "Only open Saturday and Sunday",
+    "maps": "https://maps.app.goo.gl/SRGY987dvLGTZdn8A",
+    "coordinates": "20.02607014191402, -155.65760195967886",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "North",
+    "town": "Waimea",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Da Poke Shack",
+    "description": "",
+    "maps": "https://maps.app.goo.gl/wmPRsr1X9dUUwq9h6",
+    "coordinates": "19.60789471339849, -155.97716787071457",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "West",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Maku'u Farmer's Market",
+    "description": "Only on Sunday",
+    "maps": "https://maps.app.goo.gl/SYMMsz9CsTqm7KYB6",
+    "coordinates": "19.538071768659705, -154.9722177265121",
+    "type": [
+      "Market"
+    ],
+    "region": "East",
+    "town": "Pahoa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Haena Beach",
+    "description": "Also called shipman beach. Don't go after rain as it's muddy. The hike in is ~1,5 hour maybe more. (3 miles one way)",
+    "maps": "https://maps.app.goo.gl/UiWWn74zTjz3wSER8",
+    "coordinates": "19.643419422707634, -154.98182946574755",
+    "type": [
+      "Beach",
+      "Hike"
+    ],
+    "region": "East",
+    "town": "Keaau",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Imiloa Astronomy Center",
+    "description": "Exhibits on Hawaiian history, planetarium and native plants. $19/person",
+    "maps": "https://maps.app.goo.gl/LNEc3n6XHG1j3cd39",
+    "coordinates": "19.701036794350646, -155.08862186065934",
+    "type": [
+      "Sight",
+      "Kid experience"
+    ],
+    "region": "East",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Ho'okena Beach Park",
+    "description": "South end is more sandy. Locals on canoes fishing.",
+    "maps": "https://maps.app.goo.gl/nTfPv7cDWMo7Rqdh7",
+    "coordinates": "19.379683955658354, -155.89758545011748",
+    "type": [
+      "Beach",
+      "Snorkel"
+    ],
+    "region": "West",
+    "town": "Captain Cook",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Hapuna Beach",
+    "description": "",
+    "maps": "https://maps.app.goo.gl/uqezpSFQrdzJGuFF8",
+    "coordinates": "19.99201423919833, -155.8257384000112",
+    "type": [
+      "Beach",
+      "Snorkel",
+      "Child friendly beach"
+    ],
+    "region": "West",
+    "town": "Waikoloa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Mauna Kea Beach",
+    "description": "Have to go before 10am to get access",
+    "maps": "https://maps.app.goo.gl/PBDTxkpmjMxkrJ4t6",
+    "coordinates": "20.004530898084585, -155.82456059144928",
+    "type": [
+      "Beach",
+      "Snorkel",
+      "Child friendly beach"
+    ],
+    "region": "West",
+    "town": "Waikoloa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Mauna Loa Macadamia Nut Visitor Center",
+    "description": "Nuts are cheaper at the grocery store",
+    "maps": "https://maps.app.goo.gl/ZosUdP4t6LXbndZh7",
+    "coordinates": "19.656460983373734, -155.00901312474105",
+    "type": [
+      "Sight"
+    ],
+    "region": "East",
+    "town": "Keaau",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Big Island Candies",
+    "description": "Short bread cookies, good for omiyage",
+    "maps": "https://maps.app.goo.gl/gS5TUCPKtd5gFxx6A",
+    "coordinates": "19.712447373633974, -155.06784927174485",
+    "type": [
+      "Sight"
+    ],
+    "region": "East",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Umekes Fish Market Bar & Grill",
+    "description": "Big menu with full bar. Poke, seafood, landfood.",
+    "maps": "https://maps.app.goo.gl/xfiG4B7PBK1D3fqz6",
+    "coordinates": "19.644066304077693, -155.99904859761656",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "West",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Punalu'u Bake Shop",
+    "description": "Malasadas and sweet breads",
+    "maps": "https://maps.app.goo.gl/tXT6EfNEoavX1VAJ7",
+    "coordinates": "19.061177068031213, -155.58603890739016",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "South",
+    "town": "Naalehu",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Big Island Abalone",
+    "description": "Only open weekdays. Farm tour $35, food trailer with abalone",
+    "maps": "https://maps.app.goo.gl/cQzfEgcWqjuctA6V6",
+    "coordinates": "19.71394059055058, -156.04483803240154",
+    "type": [
+      "Restaurant",
+      "Sight"
+    ],
+    "region": "West",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Cheeky Tiki",
+    "description": "Good view and tiki drinks. Right next to Kamaahonu beach which is good for kids.",
+    "maps": "https://maps.app.goo.gl/C7JhoCjs298x5HPP6",
+    "coordinates": "19.640266556697625, -155.99641267333618",
+    "type": [
+      "Drinks",
+      "Restaurant"
+    ],
+    "region": "West",
+    "town": "Kona",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Moon and Turtle",
+    "description": "Hyperlocal food, upscale. Asian fusion. They are supposed to have good cocktails as well.",
+    "maps": "https://maps.app.goo.gl/7EYRU5rTxmboKqRj9",
+    "coordinates": "19.725401803218368, -155.0871472076466",
+    "type": [
+      "Restaurant",
+      "Drinks"
+    ],
+    "region": "East",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
   }
 ]
