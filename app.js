@@ -16,7 +16,7 @@ sortSelect.innerHTML = `
 document.querySelector(".filters").prepend(sortSelect);
 
 // Geolocation and distance calculation functions
-function getUserLocation() {
+function getUserLocation(forceRefresh = false) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -24,6 +24,7 @@ function getUserLocation() {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         };
+        console.log('User location obtained:', userLocation);
         calculateDistances();
         render();
       },
@@ -35,13 +36,19 @@ function getUserLocation() {
       {
         enableHighAccuracy: true,
         timeout: 10000,
-        maximumAge: 300000 // Cache for 5 minutes
+        maximumAge: forceRefresh ? 0 : 300000 // No cache if forcing refresh, otherwise cache for 5 minutes
       }
     );
   } else {
     console.error('Geolocation is not supported by this browser.');
     render();
   }
+}
+
+// Function to refresh location and recalculate distances
+function refreshLocation() {
+  console.log('Refreshing location...');
+  getUserLocation(true); // Force refresh by bypassing cache
 }
 
 // Calculate distance between two points using Haversine formula
@@ -323,6 +330,16 @@ document.getElementById("reset-data").addEventListener("click", () => {
   // Close the hamburger menu
   document.getElementById("menu-options").classList.add("hidden");
   document.getElementById("menu-toggle").classList.remove("active");
+});
+
+// Refresh location and recalculate distances
+document.getElementById("refresh-location").addEventListener("click", () => {
+  // Close the hamburger menu
+  document.getElementById("menu-options").classList.add("hidden");
+  document.getElementById("menu-toggle").classList.remove("active");
+  
+  // Refresh the location
+  refreshLocation();
 });
 
 // Handle confirmation modal buttons
