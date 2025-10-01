@@ -172,7 +172,7 @@
   },
   {
     "name": "Kaumana Caves Lava Tube",
-    "description": "",
+    "description": "1/2 mile hike",
     "maps": "https://maps.app.goo.gl/mUN5LJirF3vBqcmf8",
     "coordinates": "19.686867631328603, -155.13083580929407",
     "type": [
@@ -366,8 +366,8 @@
     "done": false
   },
   {
-    "name": "Captain Cook Snorkeling",
-    "description": "Requires a kayak or a long hike. This is where Captain Cook was killed.",
+    "name": "Kealakekua Bay",
+    "description": "Really good snorkeling. Requires a kayak or a 3.8 mile round-trip, 1300ft hike which is exposed to the sun. This is where Captain Cook was killed.",
     "maps": "https://maps.app.goo.gl/cNP4Ht9Q9u8bzbzf7",
     "coordinates": "19.492074659575017, -155.91797220960996",
     "type": [
@@ -854,12 +854,13 @@
   },
   {
     "name": "Haena Beach",
-    "description": "Also called shipman beach. Don't go after rain as it's muddy. The hike in is ~1,5 hour maybe more. (3 miles one way)",
+    "description": "Also called shipman beach. Don't go after rain as it's muddy. The hike in onthe Puna trail is ~1,5 hour maybe more. (5 miles round trip but flat)",
     "maps": "https://maps.app.goo.gl/UiWWn74zTjz3wSER8",
     "coordinates": "19.643419422707634, -154.98182946574755",
     "type": [
       "Beach",
-      "Hike"
+      "Hike",
+      "Child friendly beach"
     ],
     "region": "East",
     "town": "Keaau",
@@ -1015,6 +1016,20 @@
     ],
     "region": "East",
     "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Pololū Valley",
+    "description": "Short 1/2 mile hike to a beach in a valley. Not for swimming.",
+    "maps": "https://maps.app.goo.gl/KsEQmsr7qHaX6skC9",
+    "coordinates": "20.203508670832722, -155.73095570978555",
+    "type": [
+      "Hike",
+      "Beach"
+    ],
+    "region": "North",
+    "town": "Halaula",
     "notes": "",
     "done": false
   }
