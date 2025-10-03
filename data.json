@@ -1072,5 +1072,209 @@
     "town": "Keaau",
     "notes": "",
     "done": false
+  },
+  {
+    "name": "Panaewa Rainforest Zoo and Gardens",
+    "description": "Free zoo",
+    "maps": "https://maps.app.goo.gl/mP7SHinFKefTGTe58",
+    "coordinates": "19.655409,-155.074791",
+    "type": [
+      "Kid experience"
+    ],
+    "region": "East",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Pohoiki Bay and Hot Spring",
+    "description": "Take the shoreline trail to the right of the boat launch for two minutes to come to a warm spring",
+    "maps": "https://maps.app.goo.gl/ZvCnZ5FoWQY9zkiZ8",
+    "coordinates": "19.457703,-154.843981",
+    "type": [
+      "Beach",
+      "Sight"
+    ],
+    "region": "East",
+    "town": "Pahoa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Napau Trailhead",
+    "description": "Lava trees (stone sentry's). 2 mile hike",
+    "maps": "https://maps.app.goo.gl/Sccx5kpn4m3f6mtG6",
+    "coordinates": "19.364817,-155.215650",
+    "type": [
+      "Hike",
+      "Sight"
+    ],
+    "region": "East",
+    "town": "Volcano",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Cafe 100",
+    "description": "Loco moco",
+    "maps": "https://maps.app.goo.gl/45E2aXMQwACPkt6p6",
+    "coordinates": "19.714334,-155.077297",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "East",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Onomea Scenic Drive",
+    "description": "Drive along the old highway ",
+    "maps": "https://maps.app.goo.gl/sQD1pTVdLCUtbJ4cA",
+    "coordinates": "19.791659,-155.094628",
+    "type": [
+      "History",
+      "Sight"
+    ],
+    "region": "East",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Honoli'i Beach Park",
+    "description": "great place to watch surfers. parking is rough on the side of the road",
+    "maps": "https://maps.app.goo.gl/dw3HSnDXQhhnJb977",
+    "coordinates": "19.7551775, -155.0906571",
+    "type": [
+      "Beach",
+      "Sight"
+    ],
+    "region": "East",
+    "town": "Hilo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "What's Shakin'",
+    "description": "Good smoothies",
+    "maps": "https://maps.app.goo.gl/vdWYKpeXJG7D83TXA",
+    "coordinates": "19.8241782, -155.0950892",
+    "type": [
+      "Restaurant"
+    ],
+    "region": "East",
+    "town": "Pepeekeo",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Honokaʻa Country Market",
+    "description": "Local beef for sale. Also wood for grilling",
+    "maps": "https://maps.app.goo.gl/AQvg8a2YAD61FEQg7",
+    "coordinates": "20.0800447, -155.4729510",
+    "type": [
+      "Market"
+    ],
+    "region": "North",
+    "town": "Honokaa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kipuka puu huluhulu",
+    "description": "Forest island on a cinder cone with good views and cool birds. 3/4 miles RT",
+    "maps": "https://maps.app.goo.gl/f6xPeXuRdE7ETb6s9",
+    "coordinates": "19.6870664, -155.4669328",
+    "type": [
+      "Hike",
+      "Sight"
+    ],
+    "region": "East",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kipuka puu huluhulu",
+    "description": "Forest island on a cinder cone with good views and cool birds. 3/4 miles RT",
+    "maps": "https://maps.app.goo.gl/f6xPeXuRdE7ETb6s9",
+    "coordinates": "19.6870664, -155.4669328",
+    "type": [
+      "Hike",
+      "Sight"
+    ],
+    "region": "East",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Mookini Heiau",
+    "description": "Lots of human sacrifices. Requires 4WD. Head left at airport along the coast on Upolu road",
+    "maps": "https://maps.app.goo.gl/5EPv1Ck53iRujmWm6",
+    "coordinates": "20.2568639, -155.8773584",
+    "type": [
+      "History",
+      "Sight"
+    ],
+    "region": "North",
+    "town": "Hawi",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Māhukona Beach Park",
+    "description": "Snorkeling off some old docks with easy ladder to get in",
+    "maps": "https://maps.app.goo.gl/8PVWouEWq1K6p8Sg8",
+    "coordinates": "20.1839854, -155.9003741",
+    "type": [
+      "Snorkel"
+    ],
+    "region": "North",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kaiholena Cove",
+    "description": "Good snorkeling. Make sure you take the gravel road not a red rock road.",
+    "maps": "https://maps.app.goo.gl/jYm9pAKKt4P3eqqJ9",
+    "coordinates": "20.1397917, -155.8913482",
+    "type": [
+      "Snorkel"
+    ],
+    "region": "North",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Hāmākua Macadamia Nut Company",
+    "description": "",
+    "maps": "https://maps.app.goo.gl/yt2i2UiQD3KAoNq97",
+    "coordinates": "20.0493982, -155.8360323",
+    "type": [
+      "Market",
+      "Sight"
+    ],
+    "region": "North",
+    "town": "Kawaihae",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Makalawena Beach",
+    "description": "Hike to a less crowded beach",
+    "maps": "https://maps.app.goo.gl/wvzVY5w84K2KmwBc9",
+    "coordinates": "19.7908217, -156.0288298",
+    "type": [
+      "Beach",
+      "Hike"
+    ],
+    "region": "West",
+    "town": "Waikoloa ",
+    "notes": "",
+    "done": false
   }
 ]
