@@ -449,6 +449,9 @@ addForm.addEventListener("submit", e => {
 };
 
   data.push(newItem);
+  
+  calculateDistances();
+  
   saveLocalState();
   populateFilters();
   render();
