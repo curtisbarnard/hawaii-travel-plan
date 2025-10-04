@@ -28,7 +28,7 @@
   },
   {
     "name": "Kamakahonu Beach",
-    "description": "Located at King Kamehameha Kona Beach Hotel. Not sure about parking.",
+    "description": "Located at King Kamehameha Kona Beach Hotel. Can snorkel from the pier to ",
     "maps": "https://maps.app.goo.gl/ZrxmqV83RP5psnM17",
     "coordinates": "19.63956912924782, -155.9977768210922",
     "type": [
@@ -381,7 +381,7 @@
   },
   {
     "name": "Kikaua Point Park",
-    "description": "Have to go early as there are only 20 spots to park. Also good for kids.",
+    "description": "Have to go early as there are only 20 spots to park. Also good for kids. Parking is to the southwest.",
     "maps": "https://maps.app.goo.gl/bu6ZSN5xvoKtAuKw9",
     "coordinates": "19.815201091394982, -156.00041156139596",
     "type": [
@@ -897,7 +897,7 @@
   },
   {
     "name": "Hapuna Beach",
-    "description": "",
+    "description": "$10 to park, plus $5 entry fee. Very famous beach. Southern most part of the beach is calmer. Wind whips up in the afternoons. South end past the sand has great snorkeling, but only go if it is calm.",
     "maps": "https://maps.app.goo.gl/uqezpSFQrdzJGuFF8",
     "coordinates": "19.99201423919833, -155.8257384000112",
     "type": [
@@ -911,8 +911,8 @@
     "done": false
   },
   {
-    "name": "Mauna Kea Beach",
-    "description": "Have to go before 10am to get access",
+    "name": "Kauna'oa (Mauna Kea) Beach",
+    "description": "Have to go before 10am to get access. $20 to park. Left side of the beach has rocks that are good for snorkeling. North side has OK snorkeling, but a stringer current.",
     "maps": "https://maps.app.goo.gl/PBDTxkpmjMxkrJ4t6",
     "coordinates": "20.004530898084585, -155.82456059144928",
     "type": [
@@ -1225,7 +1225,7 @@
   },
   {
     "name": "Māhukona Beach Park",
-    "description": "Snorkeling off some old docks with easy ladder to get in",
+    "description": "Snorkeling off some old sugar docks with easy ladder to get in. Very clear waters and if the sea is calm it's really calm. Old sugar equip and some ship remains underwater.",
     "maps": "https://maps.app.goo.gl/8PVWouEWq1K6p8Sg8",
     "coordinates": "20.1839854, -155.9003741",
     "type": [
@@ -1265,7 +1265,7 @@
   },
   {
     "name": "Makalawena Beach",
-    "description": "Hike to a less crowded beach",
+    "description": "20 minute hike to a less crowded beach, has shade.",
     "maps": "https://maps.app.goo.gl/wvzVY5w84K2KmwBc9",
     "coordinates": "19.7908217, -156.0288298",
     "type": [
@@ -1273,7 +1273,49 @@
       "Hike"
     ],
     "region": "West",
-    "town": "Waikoloa ",
+    "town": "Waikoloa",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Kapa'a Beach Park",
+    "description": "Really clear water, only go here if it is calm as there can be stron currents. Stay closer to shore. Facilities are a bit run down. No beach.",
+    "maps": "https://maps.app.goo.gl/Fm1TmLkvvGEfLYUx8",
+    "coordinates": "20.203387334821112, -155.9015071295549",
+    "type": [
+      "Snorkel"
+    ],
+    "region": "North",
+    "town": "",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Manini'owali Beach (Kua Bay)",
+    "description": "Snorkel along the north side. Seems really popular. No shade.",
+    "maps": "https://maps.app.goo.gl/xcC7bYAHwn4u15sr5",
+    "coordinates": "19.809939419420235, -156.00641268317716",
+    "type": [
+      "Snorkel",
+      "Beach",
+      "Child friendly beach"
+    ],
+    "region": "West",
+    "town": "Kukio",
+    "notes": "",
+    "done": false
+  },
+  {
+    "name": "Honokohau Beach Cove",
+    "description": "National historic park that has petroglyphs, heiau, sea turtles, a protect cover for kids to swim and fishponds. Park on the north side of the harbor and walk in.",
+    "maps": "https://maps.app.goo.gl/FEHHQ1ZQJoxK1zP87",
+    "coordinates": "19.670648205251535, -156.0263189392325",
+    "type": [
+      "History",
+      "Child friendly beach"
+    ],
+    "region": "West",
+    "town": "Kona",
     "notes": "",
     "done": false
   }
